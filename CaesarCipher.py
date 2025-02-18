@@ -1,3 +1,6 @@
+#Name: Juan V Mancilla Vargas
+#Assignment: CaesarCipher
+
 #Caesar Cipher
 #The Caesar cipher moves each letter forward in the alphabet by
 #the key.  The resulting message has all the letters advanced by 'key'
@@ -20,15 +23,16 @@ def encode(message, key):
 
 #def decode(message, key):
     #We will want to decode the message here.
-
+def decode (message, key):
+    return encode(message, -key)
 def main():
     message = input("Enter a message: ")
     key = int(input("Enter a key: "))
 
     secret = encode(message, key)
     print ("Encrypted:", secret)
-    #plaintext = decode(secret, key)
-    #print ("Decrypted:", plaintext)
+    plaintext = decode(secret, key)
+    print ("Decrypted:", plaintext)
 
 
 if __name__ == '__main__':
